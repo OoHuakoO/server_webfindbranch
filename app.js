@@ -1,8 +1,8 @@
 const express = require("express"),
   cors = require("cors");
-(adminRoutes2 = require("./routes/admin")),
-  (branchRoutes2 = require("./routes/branch")),
-  (choiceRoutes2 = require("./routes/choice")),
+(adminRoutes = require("./routes/admin")),
+  (branchRoutes = require("./routes/branch")),
+  (choiceRoutes = require("./routes/choice")),
   // set up express
   (app = express());
 app.use(express.json({ limit: "50mb" }));
