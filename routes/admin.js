@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { firestore } = require("../firebase/config");
-// router.get("/", async (req, res) => {
+router.get("/", async (req, res) => {
 //   const { listChoice } = req.body;
 //   await listChoice.forEach(async (item) => {
 //     await firestore
@@ -17,7 +17,7 @@ const { firestore } = require("../firebase/config");
 //         });
 //       });
 //   });
-//   return res.json({ status: 200, message: "Success" });
-// });
+  return res.json({ status: 200, message: "Success" });
+});
 
 module.exports = router;
