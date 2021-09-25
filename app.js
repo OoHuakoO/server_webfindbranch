@@ -14,8 +14,8 @@ app.use(cors());
 app.use("/admin", adminRoutes);
 app.use("/branch", branchRoutes);
 app.use("/choice", choiceRoutes);
-const PORT = process.env.PORT || 7000;
+const port = process.env.PORT || 8000;
 
-app.listen(PORT, () => {
-  console.log("server start on port 7000");
+app.listen(port, () => {
+  console.log("server start on port " + port);
 });
