@@ -19,4 +19,17 @@ router.post("/", async (req, res) => {
   return res.json({ status: 200, message: "Success" });
 });
 
+router.get("/", async (req, res) => {
+  let data = [];
+  await firestore
+    .collection("branch")
+    .get()
+    .then(async (querySnapshot) => {
+      await querySnapshot.forEach(async (doc) => {
+        data.push(doc.data());
+      });
+    });
+  return res.json({ status: 200, message: "Success", data: data });
+});
+
 module.exports = router;

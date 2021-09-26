@@ -1,6 +1,5 @@
 const express = require("express"),
   cors = require("cors");
-(adminRoutes = require("./routes/admin")),
   (branchRoutes = require("./routes/branch")),
   (choiceRoutes = require("./routes/choice")),
   // set up express
@@ -11,7 +10,6 @@ app.use(cors());
 
 // app
 // Set Route
-app.use("/admin", adminRoutes);
 app.use("/branch", branchRoutes);
 app.use("/choice", choiceRoutes);
 const port = process.env.PORT || 8000;
