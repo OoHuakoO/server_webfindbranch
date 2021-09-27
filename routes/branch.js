@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
     .get()
     .then(async (querySnapshot) => {
       await querySnapshot.forEach(async (doc) => {
-        data.push(doc.data());
+        data.push({ branch: doc.get("branch"), point: doc.get("point") });
       });
     });
   return res.json({ status: 200, message: "Success", data: data });
